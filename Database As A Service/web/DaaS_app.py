@@ -6,7 +6,7 @@ import bcrypt
 app = Flask(__name__)
 api = Api(app)
 
-client = MongoClient('mongodb+srv://Vignesh:2wuMXrzpAhiDk1D7@cluster0-kbolu.mongodb.net/test?retryWrites=true')
+client = MongoClient('< ENTER YOUR MONGO DB CONNECTION STRING >')
 
 db = client.test123
 col = db['DaaS']
@@ -125,4 +125,4 @@ api.add_resource(Store, "/store")
 api.add_resource(Get, "/get")
 
 if __name__ == '__main__':
-    app.run("0.0.0.0")
+    app.run("0.0.0.0", debug = True)
